@@ -1218,6 +1218,32 @@ section {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Mobile: apply hover state permanently – no hover on touch devices */
+@media (max-width: 767px) {
+  .vehicle-card {
+    border-color: rgba(184, 151, 106, 0.12);
+    box-shadow:
+      0 32px 80px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(184, 151, 106, 0.08),
+      0 0 80px rgba(184, 151, 106, 0.04);
+  }
+
+  .vehicle-card::before {
+    opacity: 1;
+    background: linear-gradient(90deg, transparent 5%, rgba(184, 151, 106, 0.3) 30%, var(--color-accent) 50%, rgba(184, 151, 106, 0.3) 70%, transparent 95%);
+  }
+
+  .vehicle-card__spotlight {
+    opacity: 1;
+    background: radial-gradient(ellipse at center top, rgba(184, 151, 106, 0.08) 0%, transparent 70%);
+  }
+
+  .vehicle-card__chip {
+    border-color: rgba(184, 151, 106, 0.12);
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
 
 /* ==========================================================================
    Route Estimator
