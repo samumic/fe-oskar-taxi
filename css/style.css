@@ -4,17 +4,17 @@
 
 :root {
   /* Colors */
-  --color-bg: #f6f5f2;
+  --color-bg: #f4f3f0;
   --color-surface: #ffffff;
-  --color-surface-alt: #f0efeb;
+  --color-surface-alt: #edece8;
   --color-surface-dark: #1a1a1a;
-  --color-text: #1a1a1a;
-  --color-text-muted: #6b6b6b;
+  --color-text: #141414;
+  --color-text-muted: #585858;
   --color-accent: #b8976a;
   --color-accent-dark: #a07d4e;
   --color-accent-light: rgba(184, 151, 106, 0.1);
-  --color-border: #e2dfda;
-  --color-border-light: #eae8e3;
+  --color-border: #dbd8d2;
+  --color-border-light: #e6e4de;
 
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -596,8 +596,8 @@ section {
   position: relative;
   z-index: 2;
   display: flex;
-  flex-direction: column;
-  gap: var(--space-48);
+  flex-direction: column-reverse;
+  gap: var(--space-32);
 }
 
 .hero__content {
@@ -631,7 +631,7 @@ section {
 .hero__text {
   font-size: 16px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.55);
   margin-bottom: var(--space-32);
   max-width: 460px;
 }
@@ -680,9 +680,9 @@ section {
 }
 
 .btn--hero.btn--secondary {
-  background: rgba(255, 255, 255, 0.03);
-  color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 16px 36px;
   font-size: 13px;
   backdrop-filter: blur(8px);
@@ -715,7 +715,7 @@ section {
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.45);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -778,7 +778,24 @@ section {
   width: 100%;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.5)) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
+}
+
+/* Disable heavy decorative effects on mobile for faster paint */
+@media (max-width: 767px) {
+  .hero__image-frame::before,
+  .hero__image-frame::after {
+    display: none;
+  }
+
+  .hero__image-frame {
+    max-width: 320px;
+  }
+
+  .hero__glow::before {
+    filter: none;
+    opacity: 0.5;
+  }
 }
 
 
@@ -1456,7 +1473,9 @@ section {
   border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 3 / 4;
+  max-width: 280px;
   max-height: 360px;
+  margin: 0 auto;
   position: relative;
   box-shadow: var(--shadow-elevated);
   border: 1px solid var(--color-border-light);
@@ -2181,7 +2200,9 @@ section {
 
   .driver__image {
     flex: 0 0 320px;
+    max-width: none;
     max-height: none;
+    margin: 0;
     aspect-ratio: 4 / 5;
   }
 
@@ -2329,6 +2350,10 @@ section {
 
   .hero__image-frame {
     max-width: 580px;
+  }
+
+  .hero__image-frame img {
+    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.5)) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
   }
 
   /* Route estimator fields side by side */
