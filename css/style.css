@@ -280,26 +280,25 @@ section {
   width: auto;
 }
 
-/* Mobile: nav is a slide-in panel, hidden off-screen right */
+/* Mobile: fullscreen nav overlay, hidden by default */
 .header__nav {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 320px;
-  max-width: 85vw;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background-color: #131413;
   z-index: 99;
-  padding: calc(64px + var(--space-48)) var(--space-32) var(--space-48);
+  padding: calc(64px + var(--space-64)) var(--space-32) var(--space-48);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  transform: translateX(100%);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-              visibility 0.4s ease;
+  opacity: 0;
   visibility: hidden;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.35s ease;
   display: flex;
   flex-direction: column;
-  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  align-items: center;
+  justify-content: center;
 }
 
 .header__nav-list {
@@ -419,51 +418,61 @@ section {
   transition: bottom 0.25s ease, top 0.25s ease, transform 0.25s ease 0.25s, width 0.25s ease;
 }
 
-/* Backdrop overlay when menu is open */
+/* Backdrop – hidden for fullscreen nav */
 .header__nav-backdrop {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  z-index: 98;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  display: none;
 }
 
-.header__nav-backdrop--visible {
+/* Mobile nav – open state */
+.header__nav--open {
   opacity: 1;
   visibility: visible;
 }
 
-/* Mobile nav slide-in – open state */
-.header__nav--open {
-  transform: translateX(0);
-  visibility: visible;
+/* Staggered link entrance */
+.header__nav .header__nav-link {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: color 0.3s ease,
+              opacity 0.35s ease,
+              transform 0.35s ease;
 }
+
+.header__nav--open .header__nav-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header__nav--open .header__nav-list li:nth-child(1) .header__nav-link { transition-delay: 0.06s; }
+.header__nav--open .header__nav-list li:nth-child(2) .header__nav-link { transition-delay: 0.1s; }
+.header__nav--open .header__nav-list li:nth-child(3) .header__nav-link { transition-delay: 0.14s; }
+.header__nav--open .header__nav-list li:nth-child(4) .header__nav-link { transition-delay: 0.18s; }
+.header__nav--open .header__nav-list li:nth-child(5) .header__nav-link { transition-delay: 0.22s; }
+.header__nav--open .header__nav-list li:nth-child(6) .header__nav-link { transition-delay: 0.26s; }
 
 .header__nav .header__nav-list {
   flex-direction: column;
   gap: 0;
-  width: 100%;
+  width: auto;
+  text-align: center;
 }
 
 .header__nav .header__nav-link {
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  font-family: var(--font-heading);
+  letter-spacing: 0.01em;
   color: rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
-  min-height: 52px;
+  justify-content: center;
+  min-height: 56px;
   padding: var(--space-4) 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  transition: color 0.3s ease, padding-left 0.3s ease;
+  border-bottom: none;
 }
 
 .header__nav .header__nav-link:hover {
   color: #ffffff;
-  padding-left: var(--space-4);
 }
 
 .header__nav .header__nav-link::after {
@@ -472,9 +481,19 @@ section {
 
 /* Mobile nav CTA area */
 .header__nav-footer {
-  margin-top: auto;
+  margin-top: var(--space-48);
   padding-top: var(--space-32);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+  width: 100%;
+  max-width: 280px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.35s ease 0.3s, transform 0.35s ease 0.3s;
+}
+
+.header__nav--open .header__nav-footer {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .header__nav-footer .btn {
@@ -2236,39 +2255,46 @@ section {
     font-size: 3rem;
   }
 
-  /* Header desktop layout – reset mobile panel to inline nav */
+  /* Header desktop layout – reset fullscreen overlay to inline nav */
   .header__nav {
     position: static;
+    inset: auto;
     width: auto;
-    max-width: none;
+    height: auto;
     background-color: transparent;
     padding: 0;
-    transform: none;
+    opacity: 1;
     visibility: visible;
     transition: none;
     display: flex;
     flex-direction: row;
-    border-left: none;
+    align-items: center;
+    justify-content: flex-start;
     overflow: visible;
   }
 
   .header__nav .header__nav-list {
     flex-direction: row;
     gap: var(--space-32);
+    text-align: left;
   }
 
   .header__nav .header__nav-link {
     font-size: 14px;
+    font-family: var(--font-body);
+    font-weight: 500;
     letter-spacing: 0;
     min-height: auto;
     padding: 0;
-    border-bottom: none;
+    justify-content: flex-start;
     color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    transform: none;
+    transition: color var(--transition);
   }
 
   .header__nav .header__nav-link:hover {
     color: #ffffff;
-    padding-left: 0;
   }
 
   .header__nav .header__nav-link::after {
