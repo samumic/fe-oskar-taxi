@@ -22,10 +22,12 @@
 
   var menuToggle = document.getElementById('menu-toggle');
   var nav = document.getElementById('nav');
+  var navBackdrop = document.getElementById('nav-backdrop');
   var navLinks = nav.querySelectorAll('.header__nav-link');
 
   function openMenu() {
     nav.classList.add('header__nav--open');
+    navBackdrop.classList.add('header__nav-backdrop--visible');
     menuToggle.setAttribute('aria-expanded', 'true');
     menuToggle.setAttribute('aria-label', 'Menü schliessen');
     document.body.style.overflow = 'hidden';
@@ -33,6 +35,7 @@
 
   function closeMenu() {
     nav.classList.remove('header__nav--open');
+    navBackdrop.classList.remove('header__nav-backdrop--visible');
     menuToggle.setAttribute('aria-expanded', 'false');
     menuToggle.setAttribute('aria-label', 'Menü öffnen');
     document.body.style.overflow = '';
@@ -46,6 +49,9 @@
       openMenu();
     }
   });
+
+  // Close menu when backdrop is tapped
+  navBackdrop.addEventListener('click', closeMenu);
 
   // Close menu when a nav link is clicked
   for (var i = 0; i < navLinks.length; i++) {
