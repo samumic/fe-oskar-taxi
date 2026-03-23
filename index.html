@@ -1,15 +1,376 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oskar Taxi GmbH</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oskar Taxi GmbH – Premium Taxi & Chauffeur Service in Zürich. Komfortable Flughafentransfers, Geschäftsfahrten und Privatfahrten mit modernen Luxusfahrzeugen.">
+  <title>Oskar Taxi GmbH – Premium Taxi & Chauffeur Service Zürich</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h1>Oskar Taxi GmbH</h1>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#start" class="header__logo">
+        <img src="images/logo.svg" alt="Oskar Taxi GmbH Logo">
+      </a>
 
-<script src="js/script.js"></script>
+      <nav class="header__nav" id="nav" aria-label="Hauptnavigation">
+        <ul class="header__nav-list">
+          <li><a href="#start" class="header__nav-link">Start</a></li>
+          <li><a href="#leistungen" class="header__nav-link">Leistungen</a></li>
+          <li><a href="#fahrzeuge" class="header__nav-link">Fahrzeuge</a></li>
+          <li><a href="#beliebte-fahrten" class="header__nav-link">Beliebte Fahrten</a></li>
+          <li><a href="#chauffeur" class="header__nav-link">Ihr Chauffeur</a></li>
+          <li><a href="#kontakt" class="header__nav-link">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <a href="tel:+41794411612" class="btn btn--primary header__cta">Jetzt anrufen</a>
+
+      <button class="header__menu-toggle" id="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span class="header__menu-icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="start">
+      <div class="hero__backdrop"></div>
+      <div class="hero__glow"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__label">Oskar Taxi GmbH – Zürich</span>
+          <h1 class="hero__title">Premium Taxi &<br>Chauffeur Service</h1>
+          <p class="hero__text">Komfortable Flughafentransfers, Geschäftsfahrten und exklusive Privatfahrten mit modernen Premium-Fahrzeugen.</p>
+
+          <div class="hero__cta-group">
+            <a href="tel:+41794411612" class="btn btn--primary btn--hero">Jetzt anrufen</a>
+            <a href="mailto:Azatuzuner@gmail.com?subject=Transferanfrage&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20einen%20Transfer%20anfragen.%0A%0ADatum%3A%0AUhrzeit%3A%0AAbholort%3A%0AZielort%3A%0AAnzahl%20Personen%3A%0AGep%C3%A4ck%3A%0A%0AVielen%20Dank." class="btn btn--secondary btn--hero">Transfer anfragen</a>
+          </div>
+
+          <ul class="hero__trust-indicators">
+            <li>24/7 verfügbar</li>
+            <li>Flughafentransfers in Zürich</li>
+            <li>Premium Fahrzeuge</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__image-frame">
+            <img src="images/sclass.png" alt="Mercedes S-Class – Premium Chauffeur Service">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="leistungen">
+      <div class="container">
+        <span class="section-label">Was wir bieten</span>
+        <h2 class="section-title">Unsere Leistungen</h2>
+
+        <div class="services__grid">
+          <article class="service-card" data-index="01">
+            <h3 class="service-card__title">Flughafentransfer</h3>
+            <p class="service-card__text">Zuverlässige und komfortable Fahrten von und zum Flughafen Zürich – pünktlich, diskret und stressfrei.</p>
+          </article>
+
+          <article class="service-card" data-index="02">
+            <h3 class="service-card__title">Geschäftsfahrten</h3>
+            <p class="service-card__text">Professioneller Chauffeurservice für Business-Termine und Firmenkunden.</p>
+          </article>
+
+          <article class="service-card" data-index="03">
+            <h3 class="service-card__title">Privater Chauffeur</h3>
+            <p class="service-card__text">Exklusive Fahrten für private Anlässe, Events und individuelle Reisen.</p>
+          </article>
+        </div>
+
+        <div class="services__cta-row">
+          <a href="tel:+41794411612" class="btn btn--primary">Jetzt anrufen</a>
+          <a href="mailto:Azatuzuner@gmail.com?subject=Transferanfrage&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20einen%20Transfer%20anfragen.%0A%0ADatum%3A%0AUhrzeit%3A%0AAbholort%3A%0AZielort%3A%0AAnzahl%20Personen%3A%0AGep%C3%A4ck%3A%0A%0AVielen%20Dank." class="btn btn--secondary">Transfer anfragen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vehicles -->
+    <section class="vehicles" id="fahrzeuge">
+      <div class="vehicles__ambient"></div>
+      <div class="container">
+        <span class="vehicles__label">Unsere Flotte</span>
+        <h2 class="section-title">Exklusive Fahrzeuge</h2>
+        <p class="vehicles__subtitle">Moderne Premium-Fahrzeuge für höchsten Komfort und stilvolles Reisen.</p>
+
+        <div class="vehicles__grid">
+          <article class="vehicle-card">
+            <div class="vehicle-card__spotlight"></div>
+            <div class="vehicle-card__image">
+              <img src="images/bmw7.png" alt="BMW 7 Series – Luxuslimousine">
+            </div>
+            <div class="vehicle-card__content">
+              <span class="vehicle-card__badge">Luxuslimousine</span>
+              <h3 class="vehicle-card__title">BMW 7 Series</h3>
+              <p class="vehicle-card__description">Luxuriöse Limousine mit höchstem Komfort – ideal für Geschäftsreisen und exklusive Fahrten.</p>
+              <div class="vehicle-card__chips">
+                <span class="vehicle-card__chip">Höchster Komfort</span>
+                <span class="vehicle-card__chip">Business & VIP</span>
+                <span class="vehicle-card__chip">Neuestes Modell</span>
+              </div>
+              <a href="mailto:Azatuzuner@gmail.com?subject=Fahrzeuganfrage%3A%20BMW%207%20Series&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20eine%20Fahrt%20mit%20dem%20BMW%207%20Series%20anfragen.%0A%0ADatum%3A%0AUhrzeit%3A%0AAbholort%3A%0AZielort%3A%0AAnzahl%20Personen%3A%0A%0AVielen%20Dank." class="btn btn--primary">Fahrt anfragen</a>
+            </div>
+          </article>
+
+          <article class="vehicle-card">
+            <div class="vehicle-card__spotlight"></div>
+            <div class="vehicle-card__image">
+              <img src="images/sclass.png" alt="Mercedes S-Class – Eleganz auf höchstem Niveau">
+            </div>
+            <div class="vehicle-card__content">
+              <span class="vehicle-card__badge">Premium Limousine</span>
+              <h3 class="vehicle-card__title">Mercedes S-Class</h3>
+              <p class="vehicle-card__description">Eleganz auf höchstem Niveau – ein exklusives Fahrerlebnis für anspruchsvolle Kunden.</p>
+              <div class="vehicle-card__chips">
+                <span class="vehicle-card__chip">Exklusives Fahrerlebnis</span>
+                <span class="vehicle-card__chip">First Class</span>
+                <span class="vehicle-card__chip">Neuestes Modell</span>
+              </div>
+              <a href="mailto:Azatuzuner@gmail.com?subject=Fahrzeuganfrage%3A%20Mercedes%20S-Class&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20eine%20Fahrt%20mit%20der%20Mercedes%20S-Class%20anfragen.%0A%0ADatum%3A%0AUhrzeit%3A%0AAbholort%3A%0AZielort%3A%0AAnzahl%20Personen%3A%0A%0AVielen%20Dank." class="btn btn--primary">Fahrt anfragen</a>
+            </div>
+          </article>
+
+          <article class="vehicle-card">
+            <div class="vehicle-card__spotlight"></div>
+            <div class="vehicle-card__image">
+              <img src="images/vclass.png" alt="Mercedes V-Class – Ideal für Gruppen">
+            </div>
+            <div class="vehicle-card__content">
+              <span class="vehicle-card__badge">Gruppentransfer</span>
+              <h3 class="vehicle-card__title">Mercedes V-Class</h3>
+              <p class="vehicle-card__description">Komfortabler Gruppentransfer mit viel Platz für Passagiere und Gepäck.</p>
+              <div class="vehicle-card__chips">
+                <span class="vehicle-card__chip">Ideal für Gruppen</span>
+                <span class="vehicle-card__chip">Viel Gepäckraum</span>
+                <span class="vehicle-card__chip">Flughafentransfer</span>
+              </div>
+              <a href="mailto:Azatuzuner@gmail.com?subject=Fahrzeuganfrage%3A%20Mercedes%20V-Class&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20eine%20Fahrt%20mit%20der%20Mercedes%20V-Class%20anfragen.%0A%0ADatum%3A%0AUhrzeit%3A%0AAbholort%3A%0AZielort%3A%0AAnzahl%20Personen%3A%0A%0AVielen%20Dank." class="btn btn--primary">Fahrt anfragen</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mini Route Estimator -->
+    <section class="route-estimator" id="streckenrechner">
+      <div class="container">
+        <h2 class="section-title">Transfer anfragen</h2>
+        <p class="route-estimator__text">Geben Sie Ihren Abholort und Zielort ein – wir melden uns umgehend bei Ihnen.</p>
+
+        <form class="route-estimator__form" id="route-form">
+          <div class="route-estimator__fields">
+            <div class="route-estimator__field">
+              <label for="route-from">Abholort</label>
+              <input type="text" id="route-from" placeholder="z.B. Flughafen Zürich" required>
+            </div>
+            <div class="route-estimator__field">
+              <label for="route-to">Zielort</label>
+              <input type="text" id="route-to" placeholder="z.B. Zürich City" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary route-estimator__submit">Transfer anfragen</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Popular Routes -->
+    <section class="popular-routes" id="beliebte-fahrten">
+      <div class="container">
+        <span class="section-label">Häufig gebucht</span>
+        <h2 class="section-title">Beliebte Fahrten</h2>
+
+        <div class="popular-routes__grid">
+          <article class="route-card">
+            <h3 class="route-card__title">Flughafen Zürich → Zürich City</h3>
+            <p class="route-card__distance">ca. 11 km</p>
+            <p class="route-card__text">Schneller und komfortabler Transfer vom Flughafen ins Stadtzentrum.</p>
+            <div class="route-card__cta-group">
+              <a href="mailto:Azatuzuner@gmail.com?subject=Transferanfrage%3A%20Flughafen%20Z%C3%BCrich%20nach%20Z%C3%BCrich%20City&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20folgenden%20Transfer%20anfragen%3A%0A%0AStrecke%3A%20Flughafen%20Z%C3%BCrich%20nach%20Z%C3%BCrich%20City%0ADatum%3A%0AUhrzeit%3A%0AAnzahl%20Personen%3A%0AGep%C3%A4ck%3A%0AAbholort%3A%0AZielort%3A%0A%0AVielen%20Dank." class="btn btn--primary">Transfer anfragen</a>
+              <a href="tel:+41794411612" class="btn btn--secondary">Anrufen</a>
+            </div>
+          </article>
+
+          <article class="route-card">
+            <h3 class="route-card__title">Zürich City → Flughafen Zürich</h3>
+            <p class="route-card__distance">ca. 11 km</p>
+            <p class="route-card__text">Pünktlicher Transfer zum Flughafen – stressfrei und zuverlässig.</p>
+            <div class="route-card__cta-group">
+              <a href="mailto:Azatuzuner@gmail.com?subject=Transferanfrage%3A%20Z%C3%BCrich%20City%20nach%20Flughafen%20Z%C3%BCrich&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20folgenden%20Transfer%20anfragen%3A%0A%0AStrecke%3A%20Z%C3%BCrich%20City%20nach%20Flughafen%20Z%C3%BCrich%0ADatum%3A%0AUhrzeit%3A%0AAnzahl%20Personen%3A%0AGep%C3%A4ck%3A%0AAbholort%3A%0AZielort%3A%0A%0AVielen%20Dank." class="btn btn--primary">Transfer anfragen</a>
+              <a href="tel:+41794411612" class="btn btn--secondary">Anrufen</a>
+            </div>
+          </article>
+
+          <article class="route-card">
+            <h3 class="route-card__title">Flughafen Zürich → Glattbrugg</h3>
+            <p class="route-card__distance">ca. 4 km</p>
+            <p class="route-card__text">Kurzer, komfortabler Transfer direkt vom Flughafen.</p>
+            <div class="route-card__cta-group">
+              <a href="mailto:Azatuzuner@gmail.com?subject=Transferanfrage%3A%20Flughafen%20Z%C3%BCrich%20nach%20Glattbrugg&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20folgenden%20Transfer%20anfragen%3A%0A%0AStrecke%3A%20Flughafen%20Z%C3%BCrich%20nach%20Glattbrugg%0ADatum%3A%0AUhrzeit%3A%0AAnzahl%20Personen%3A%0AGep%C3%A4ck%3A%0AAbholort%3A%0AZielort%3A%0A%0AVielen%20Dank." class="btn btn--primary">Transfer anfragen</a>
+              <a href="tel:+41794411612" class="btn btn--secondary">Anrufen</a>
+            </div>
+          </article>
+
+          <article class="route-card">
+            <h3 class="route-card__title">Flughafen Zürich → Winterthur</h3>
+            <p class="route-card__distance">ca. 26 km</p>
+            <p class="route-card__text">Bequemer Transfer von Zürich nach Winterthur in Premium-Fahrzeugen.</p>
+            <div class="route-card__cta-group">
+              <a href="mailto:Azatuzuner@gmail.com?subject=Transferanfrage%3A%20Flughafen%20Z%C3%BCrich%20nach%20Winterthur&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20folgenden%20Transfer%20anfragen%3A%0A%0AStrecke%3A%20Flughafen%20Z%C3%BCrich%20nach%20Winterthur%0ADatum%3A%0AUhrzeit%3A%0AAnzahl%20Personen%3A%0AGep%C3%A4ck%3A%0AAbholort%3A%0AZielort%3A%0A%0AVielen%20Dank." class="btn btn--primary">Transfer anfragen</a>
+              <a href="tel:+41794411612" class="btn btn--secondary">Anrufen</a>
+            </div>
+          </article>
+
+          <article class="route-card">
+            <h3 class="route-card__title">Flughafen Zürich → Luzern</h3>
+            <p class="route-card__distance">ca. 68 km</p>
+            <p class="route-card__text">Entspannter Langstreckentransfer in die Zentralschweiz.</p>
+            <div class="route-card__cta-group">
+              <a href="mailto:Azatuzuner@gmail.com?subject=Transferanfrage%3A%20Flughafen%20Z%C3%BCrich%20nach%20Luzern&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20folgenden%20Transfer%20anfragen%3A%0A%0AStrecke%3A%20Flughafen%20Z%C3%BCrich%20nach%20Luzern%0ADatum%3A%0AUhrzeit%3A%0AAnzahl%20Personen%3A%0AGep%C3%A4ck%3A%0AAbholort%3A%0AZielort%3A%0A%0AVielen%20Dank." class="btn btn--primary">Transfer anfragen</a>
+              <a href="tel:+41794411612" class="btn btn--secondary">Anrufen</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Driver -->
+    <section class="driver" id="chauffeur">
+      <div class="container driver__inner">
+        <div class="driver__image">
+          <img src="images/driver.jpg" alt="Özgür Uzuner – Ihr Chauffeur">
+        </div>
+
+        <div class="driver__content">
+          <h2 class="section-title">Ihr Chauffeur</h2>
+          <p class="driver__name">Özgür Uzuner</p>
+          <p class="driver__role">Gründer von Oskar Taxi GmbH</p>
+
+          <p>Mein Name ist Özgür Uzuner, Gründer von Oskar Taxi GmbH.</p>
+          <p>Als professioneller Chauffeur biete ich zuverlässige und komfortable Fahrten in Zürich und der gesamten Schweiz an.</p>
+          <p>Ob Flughafentransfer, Geschäftsreise oder private Fahrt – mein Ziel ist es, Ihnen jederzeit eine angenehme, sichere und pünktliche Fahrt zu bieten.</p>
+          <p>Mit modernen Premium-Fahrzeugen und persönlichem Service steht Ihre Zufriedenheit für mich an erster Stelle.</p>
+
+          <ul class="driver__highlights">
+            <li>Professioneller Chauffeurservice</li>
+            <li>Moderne Premium-Fahrzeuge</li>
+            <li>Zuverlässig & pünktlich</li>
+            <li>24/7 erreichbar</li>
+          </ul>
+
+          <div class="driver__cta-group">
+            <a href="tel:+41794411612" class="btn btn--primary">Jetzt anrufen</a>
+            <a href="mailto:Azatuzuner@gmail.com?subject=Transferanfrage&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20einen%20Transfer%20anfragen.%0A%0ADatum%3A%0AUhrzeit%3A%0AAbholort%3A%0AZielort%3A%0AAnzahl%20Personen%3A%0AGep%C3%A4ck%3A%0A%0AVielen%20Dank." class="btn btn--secondary">Transfer anfragen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="warum">
+      <div class="container">
+        <span class="section-label">Ihre Vorteile</span>
+        <h2 class="section-title">Warum Oskar Taxi</h2>
+
+        <div class="why-us__grid">
+          <article class="why-us__card">
+            <h3 class="why-us__card-title">Professioneller Chauffeurservice</h3>
+            <p class="why-us__card-text">Erfahrener, diskreter und zuverlässiger Fahrservice für jeden Anlass.</p>
+          </article>
+
+          <article class="why-us__card">
+            <h3 class="why-us__card-title">Moderne Luxusfahrzeuge</h3>
+            <p class="why-us__card-text">BMW 7 Series, Mercedes S-Class und V-Class – stets gepflegt und aktuell.</p>
+          </article>
+
+          <article class="why-us__card">
+            <h3 class="why-us__card-title">Pünktliche Flughafentransfers</h3>
+            <p class="why-us__card-text">Zuverlässige Abholung und Ankunft – Ihr Flug ist unser Zeitplan.</p>
+          </article>
+
+          <article class="why-us__card">
+            <h3 class="why-us__card-title">Diskret und komfortabel</h3>
+            <p class="why-us__card-text">Höchste Diskretion und erstklassiger Komfort bei jeder Fahrt.</p>
+          </article>
+
+          <article class="why-us__card">
+            <h3 class="why-us__card-title">24/7 verfügbar</h3>
+            <p class="why-us__card-text">Rund um die Uhr erreichbar – auch für kurzfristige Buchungen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="kontakt">
+      <div class="container">
+        <span class="section-label section-label--light">Jetzt erreichen</span>
+        <h2 class="section-title">Kontakt</h2>
+
+        <div class="contact__inner">
+          <div class="contact__info">
+            <p class="contact__company">Oskar Taxi GmbH</p>
+            <p class="contact__person">Özgür Uzuner</p>
+
+            <address class="contact__address">
+              Frohbühlstr 20<br>
+              8152 Glattbrugg
+            </address>
+
+            <p class="contact__detail">
+              <strong>Telefon:</strong>
+              <a href="tel:+41794411612">079 441 16 12</a>
+            </p>
+            <p class="contact__detail">
+              <strong>E-Mail:</strong>
+              <a href="mailto:Azatuzuner@gmail.com">Azatuzuner@gmail.com</a>
+            </p>
+          </div>
+
+          <div class="contact__cta-group">
+            <a href="tel:+41794411612" class="btn btn--primary">Jetzt anrufen</a>
+            <a href="mailto:Azatuzuner@gmail.com?subject=Kontaktanfrage&body=Hallo%20Oskar%20Taxi%20GmbH%2C%0A%0Aich%20m%C3%B6chte%20gerne%20Kontakt%20aufnehmen.%0A%0AVielen%20Dank." class="btn btn--secondary">E-Mail senden</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__info">
+        <p class="footer__company">Oskar Taxi GmbH</p>
+        <p>Frohbühlstr 20, 8152 Glattbrugg</p>
+        <p>Telefon: <a href="tel:+41794411612">079 441 16 12</a></p>
+        <p>E-Mail: <a href="mailto:Azatuzuner@gmail.com">Azatuzuner@gmail.com</a></p>
+      </div>
+
+      <p class="footer__copyright">&copy; 2026 Oskar Taxi GmbH. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Call Button -->
+  <a href="tel:+41794411612" class="floating-call-btn" aria-label="Jetzt anrufen">
+    <span class="floating-call-btn__icon">&#9742;</span>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Nach oben scrollen">&#8593;</button>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
