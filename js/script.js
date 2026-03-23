@@ -122,9 +122,7 @@
     '.driver__image',
     '.driver__content',
     '.contact__inner',
-    '.route-estimator__form',
-    '.hero__content',
-    '.hero__visual'
+    '.route-estimator__form'
   ];
 
   var revealElements = document.querySelectorAll(revealSelectors.join(', '));
